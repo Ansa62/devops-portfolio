@@ -12,3 +12,9 @@ Hands-on projects for learning Docker and Kubernetes.
 - Multi-container stack using Docker Compose
 - Run: `cd wordpress && docker compose up -d`
 - Open: http://localhost:8081
+
+## Phase 3: Kubernetes
+- Local cluster with kind: `kind create cluster --name devops`
+- Load image: `kind load docker-image my-website:1.0 --name devops`
+- Deploy: `kubectl apply -f k8s/website.yaml`
+- Access: `kubectl port-forward service/website 8082:80`
